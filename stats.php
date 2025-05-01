@@ -40,7 +40,7 @@ include 'BDD.php';
 // Récupérer l'ID du Pokémon depuis l'URL
 $pokemonId = isset($_GET['pokemonId']) ? intval($_GET['pokemonId']) : 0;
 if ($pokemonId <= 0) {
-    header('Location: stats/selection_stats.php');
+    header('Location: selection_stats.php');
     exit;
 }
 
