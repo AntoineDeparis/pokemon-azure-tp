@@ -1,7 +1,7 @@
 <?php
 session_start();
-include '../ADMIN/BDD.php'; // Connexion à la base de données
-include '../ADMIN/log_info.php'; // Inclure le fichier de log
+include 'BDD.php'; // Connexion à la base de données
+include 'log_info.php'; // Inclure le fichier de log
 
 // Vérifier si le formulaire d'inscription est soumis
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
