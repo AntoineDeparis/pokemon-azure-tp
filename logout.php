@@ -14,11 +14,11 @@ if (isset($_SESSION['user_id'])) {
     logLogout($pseudo);
 
     // Redirection vers la page d'accueil après déconnexion
-    header("Location: ../index.php");
+    header("Location: index.php");
     exit();
 } else {
     // Si l'utilisateur n'est pas connecté, redirection vers l'accueil
-    header("Location: ../index.php");
+    header("Location: index.php");
     exit();
 }
 ?>
