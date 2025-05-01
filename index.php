@@ -26,7 +26,7 @@ include 'head.php';
             echo '<p class="lead">Vous êtes connecté. Prêt à commencer le jeu ?</p>';
             echo '<a href="game.php" class="btn btn-primary btn-lg">Commencer le jeu</a>';
             echo '<br><br>';
-            echo '<a href="V2/logout.php" class="btn btn-danger">Se déconnecter</a>';
+            echo '<a href="logout.php" class="btn btn-danger">Se déconnecter</a>';
         } else {
             // Si l'utilisateur n'est pas connecté, afficher les formulaires de connexion et d'inscription
         ?>
@@ -35,7 +35,7 @@ include 'head.php';
             <div class="col-md-5">
                 <!-- Formulaire de connexion -->
                 <h2>Connexion</h2>
-                <form method="post" action="V2/login.php">
+                <form method="post" action="login.php">
                     <div class="mb-3">
                         <label for="login_username" class="form-label">Nom d'utilisateur :</label>
                         <input type="text" class="form-control" id="login_username" name="username" required>
@@ -55,7 +55,7 @@ include 'head.php';
             <div class="col-md-5">
                 <!-- Formulaire d'inscription -->
                 <h2>Inscription</h2>
-                <form method="post" action="V2/register.php">
+                <form method="post" action="register.php">
                     <div class="mb-3">
                         <label for="register_username" class="form-label">Nom d'utilisateur :</label>
                         <input type="text" class="form-control" id="register_username" name="username" required minlength="3" maxlength="32">
