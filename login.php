@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Écrire dans le fichier log via log_info.php
         logConnectionAttempt($pseudo, true);
 
-        header('Location: ../game.php');
+        header('Location: game.php');
         exit();
     } else {
         $_SESSION['error'] = "Nom d'utilisateur ou mot de passe incorrect.";
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Écrire dans le fichier log via log_info.php
         logConnectionAttempt($pseudo, false);
 
-        header('Location: ../index.php');
+        header('Location: index.php');
         exit();
     }
 }
