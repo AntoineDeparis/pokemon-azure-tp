@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../ADMIN/log_info.php'; // Inclure le fichier de log
+include 'log_info.php'; // Inclure le fichier de log
 
 // Vérifier si l'utilisateur est connecté
 if (isset($_SESSION['user_id'])) {
