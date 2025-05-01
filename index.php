@@ -1,13 +1,13 @@
 <?php 
 session_start(); // Démarrer la session avant toute sortie HTML
 $title = 'Pokemon Game';
-include 'ADMIN/head.php'; 
+include 'head.php'; 
 ?>
 
 <body>
 
     <!-- Inclusion du header -->
-    <?php include 'ADMIN/header.php'; ?>
+    <?php include 'header.php'; ?>
 
     <div class="container mt-5 text-center">
         
