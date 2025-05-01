@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($password !== $passwordConfirm) {
         $_SESSION['error'] = "Les mots de passe ne correspondent pas.";
         logRegisterAttempt($pseudo, false); // Logger l'échec de l'inscription
-        header('Location: ../index.php');
+        header('Location: index.php');
         exit();
     }
 
@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($stmt->fetchColumn() > 0) {
         $_SESSION['error'] = "Nom d'utilisateur déjà pris.";
         logRegisterAttempt($pseudo, false); // Logger l'échec de l'inscription
-        header('Location: ../index.php');
+        header('Location: index.php');
         exit();
     }
 
@@ -36,12 +36,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['user_id'] = $bdd->lastInsertId();
         $_SESSION['username'] = $pseudo;
         logRegisterAttempt($pseudo, true); // Logger la réussite de l'inscription
-        header('Location: ../game.php');
+        header('Location: game.php');
         exit();
     } else {
         $_SESSION['error'] = "Erreur lors de l'inscription.";
         logRegisterAttempt($pseudo, false); // Logger l'échec de l'inscription
-        header('Location: ../index.php');
+        header('Location: index.php');
         exit();
     }
 }
