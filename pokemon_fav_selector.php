@@ -56,7 +56,7 @@ if (isset($_GET['pokemonId'])) {
 </head>
 <body>
 
-    <?php include 'ADMIN/header.php'; ?>
+    <?php include 'header.php'; ?>
 
     <div class="container mt-5">
         <h1 class="text-center">Choisissez votre Pokémon favori</h1>
