@@ -34,8 +34,8 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 $userId = $_SESSION['user_id'];
-include 'Admin/header.php';
-include 'Admin/BDD.php'; 
+include 'header.php';
+include 'BDD.php'; 
 
 // Récupérer l'ID du Pokémon depuis l'URL
 $pokemonId = isset($_GET['pokemonId']) ? intval($_GET['pokemonId']) : 0;
