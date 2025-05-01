@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'ADMIN/BDD.php';
+include 'BDD.php';
 
 // Vérifier si un Pokémon a été sélectionné
 if (!isset($_GET['pokemonId'])) {
@@ -82,7 +82,7 @@ $pv = isset($pokemonJoueur['stats']['hp']) ? $pokemonJoueur['stats']['hp'] : 0;
 </head>
 <body>
 
-    <?php include 'ADMIN/header.php'; ?>
+    <?php include 'header.php'; ?>
 
     <div class="container mt-5">
         <h1 class="text-center">Bienvenue, <?php echo htmlspecialchars($user['pseudo']); ?> !</h1>
