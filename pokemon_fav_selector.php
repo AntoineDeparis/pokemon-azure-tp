@@ -8,7 +8,7 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 $userId = $_SESSION['user_id'];
-include 'Admin/BDD.php'; // Connexion à la base de données
+include 'BDD.php'; // Connexion à la base de données
 
 // Si un Pokémon est sélectionné
 if (isset($_GET['pokemonId'])) {
