@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id'])) {
 
 $userId = $_SESSION['user_id'];
 
-include 'Admin/BDD.php'; // Connexion à la BDD
+include 'BDD.php'; // Connexion à la BDD
 
 // Récupérer les statistiques du profil de l'utilisateur
 $stmt = $bdd->prepare("SELECT pseudo, game_num, win_num, fav, fav_game_num FROM users WHERE id = :user_id");
@@ -81,7 +81,7 @@ $pokemonImage = fetchPokemonImageFromTyradex($favPokemonId);
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <?php include 'ADMIN/header.php'; ?>
+    <?php include 'header.php'; ?>
     <div class="container mt-5">
         <h1 class="text-center">Profil du Joueur - <?php echo htmlspecialchars($profilStats['pseudo']); ?></h1>
         <div class="mt-4 text-center">
